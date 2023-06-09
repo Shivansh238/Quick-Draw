@@ -1,0 +1,76 @@
+body{
+  
+    background-position: center;
+    font-variant: small-caps;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+}
+
+h1{
+    background-color:lightcyan;
+    margin: 0;
+    padding: 5px;
+}
+
+#show_sketch{
+    float:right; 
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+
+  canvas{
+    margin-top:120px;
+    border-radius: 17px;
+    border:3px solid black;
+    animation-name:Canimation ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes Canimation {
+    0%{
+        box-shadow: 5px 5px 40px grey;
+    }
+    25%{
+        box-shadow: 5px 5px 40px rgb(10, 247, 191);
+    }
+    50%{
+        box-shadow: 5px 5px 40px rgb(254, 50, 50);
+    }
+    75%{
+        box-shadow: 5px 5px 40px rgb(0, 68, 255);
+    }
+    100%{
+        box-shadow: 5px 5px 40px rgb(93, 0, 255);
+    }
+  }
+
+  p{
+    font-size: 25px;
+background-color: rgba(0, 0, 0, 0.543);
+color: white;
+width:fit-content;
+border-radius: 4px;
+padding: 10px;
+  }
+  #score{
+    background-color: rgba(0, 0, 0, 0.543);
+color: white;
+border-radius: 4px;
+    font-size: 30px;
+    margin-left: 20px;
+    padding: 10px;
+    letter-spacing: 2px;
+  }
+
+  #time{
+    background-color: rgba(0, 0, 0, 0.543);
+color: white;
+border-radius: 4px;
+    font-size: 30px;
+    margin-right: 20px;
+    float:right;
+    padding: 10px;
+    letter-spacing: 2px;
+
+  }
