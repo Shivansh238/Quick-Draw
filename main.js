@@ -46,12 +46,31 @@ if(error){
     console.log(result);
 document.getElementById("label").innerHTML="label: " + result[0].label;
 document.getElementById("confidence").innerHTML="confidence: " + Math.round(result[0].confidence * 100) + "%";
-utterthis= new SpeechSynthesisUtterance(result[0].label);
-synth = window.SpeechSynthesis;
-synth.speak(utterthis);
 }
 }
 
+function check_sketch(){
+    counter= counter+1;
+    document.getElementById("time").innerHTML = "timer: " + counter;
+    console.log(counter);
+    if (counter > 600)
+{
+counter = 0 ;
+check = "completed";
+}
+if (check == "completed"|| answer_holder == "set"){
+check = " ";
+answer_holder= " ";
+updateCanvas();
+}
+}
+
+function updateCanvas(){
+    background("white");
+    randomno = Math.floor((Math.random() * quick_draw_data_set.length) + 1);
+    sketch = quick_draw_data_set[randomno];
+    document.getElementById("sketchName").innerHTML = "sketch to be drawn : " + sketch;
+}
 
 
 
